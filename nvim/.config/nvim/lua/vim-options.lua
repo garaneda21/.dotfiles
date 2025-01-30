@@ -15,6 +15,9 @@ vim.cmd("set relativenumber")
 vim.cmd("set background=dark")
 vim.cmd("syntax on")
 
+vim.cmd("set cursorline")
+-- vim.cmd("set cursorcolumn")
+
 -- Mantener cursos a la mitad de la pantalla en scroll
 vim.cmd(":noremap <C-d> <C-d>zz")
 vim.cmd(":noremap <C-u> <C-u>zz")
