@@ -6,17 +6,34 @@ return {
 		"L3MON4D3/LuaSnip",
 		dependencies = {
 			"saadparwaiz1/cmp_luasnip",
-			"rafamadriz/friendly-snippets", --snippets de vscode :)
 		},
 	},
+    {
+        -- Iconos en la ventana de sugerencias
+        "onsails/lspkind.nvim"
+    },
 	{
+        --  Encargado de mostrar las sugerencias de autocompletado
+        --  a través de una ventana
 		"hrsh7th/nvim-cmp",
 		config = function()
 			local cmp = require("cmp")
+            local lspkind = require("lspkind")
             local luasnip = require("luasnip")
-            require("luasnip.loaders.from_vscode").lazy_load()
 
 			cmp.setup({
+                formatting = {
+                    format = lspkind.cmp_format({
+                        mode = 'symbol_text',
+                        menu = ({
+                            buffer = "[Buffer]",
+                            nvim_lsp = "[LSP]",
+                            luasnip = "[LuaSnip]",
+                            nvim_lua = "[Lua]",
+                            latex_symbols = "[LaTeX]",
+                        })
+                    }),
+                },
 				snippet = {
 					expand = function(args)
 						require("luasnip").lsp_expand(args.body)
@@ -32,7 +49,6 @@ return {
 					["<C-Space>"] = cmp.mapping.complete(),
 					["<C-e>"] = cmp.mapping.abort(),
 
-                    
                     --[[ USAR TAB PARA RECORRER AUTOCOMPLETADOS ]]
                     ['<CR>'] = cmp.mapping(function(fallback)
                         if cmp.visible() then

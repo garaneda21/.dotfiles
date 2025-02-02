@@ -1,4 +1,5 @@
 return {
+
     {
         "williamboman/mason.nvim",
         lazy = false,
@@ -15,7 +16,7 @@ return {
                     "lua_ls",
                     "ts_ls",
                     "clangd",
-                    "texlab",
+                    "texlab"
                 }
             })
         end

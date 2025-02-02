@@ -9,7 +9,7 @@ return {
 		name = "nightfox",
 		priority = 1000,
 		config = function()
-            -- vim.cmd.colorscheme "onedark"
+            -- vim.cmd.colorscheme ""
         end,
 	},
 	{
@@ -19,14 +19,17 @@ return {
         config = function ()
             local onedark = require("onedark")
     		onedark.setup({
-    			style = "cool",
+    			style = "deep",
     			transparent = false,
                 toggle_style_key = "<leader>ts",
+                term_colors = true,
+                cmp_itemkind_reverse = false,
                 code_style = {
                     comments = 'italic',
                 },
     		})
-            vim.cmd.colorscheme "onedark"
+
+            require('onedark').load()
         end,
 	},
 }
