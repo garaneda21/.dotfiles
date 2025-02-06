@@ -5,14 +5,6 @@ return {
 		priority = 1000,
 	},
 	{
-		"EdenEast/nightfox.nvim",
-		name = "nightfox",
-		priority = 1000,
-		config = function()
-            -- vim.cmd.colorscheme ""
-        end,
-	},
-	{
 		"navarasu/onedark.nvim",
 		name = "onedark",
 		priority = 1000,
