@@ -10,6 +10,10 @@ return {
     config = function ()
         vim.keymap.set('n', '<leader>e', ':Neotree filesystem reveal left<CR>')
         vim.keymap.set('n', '<leader>E', ':Neotree toggle<CR>')
+
+        require('neo-tree').setup({
+            close_if_last_window = true,
+        })
     end
 }
 
