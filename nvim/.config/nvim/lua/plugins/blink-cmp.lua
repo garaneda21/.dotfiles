@@ -20,13 +20,25 @@ return { -- Autocompletion
                 -- `friendly-snippets` contains a variety of premade snippets.
                 --    See the README about individual language/framework/plugin snippets:
                 --    https://github.com/rafamadriz/friendly-snippets
-                -- {
-                --   'rafamadriz/friendly-snippets',
-                --   config = function()
-                --     require('luasnip.loaders.from_vscode').lazy_load()
-                --   end,
-                -- },
+                {
+                  'rafamadriz/friendly-snippets',
+                  config = function()
+                    require('luasnip.loaders.from_vscode').lazy_load()
+                  end,
+                },
             },
+
+            config = function()
+                local luasnip = require('luasnip')
+
+                luasnip.filetype_extend("php", {"html"})
+                luasnip.filetype_extend("php", {"phpdoc"})
+                luasnip.filetype_extend("php", {"blade"})
+
+                luasnip.filetype_extend("blade", {"html"})
+                luasnip.filetype_extend("blade", {"php"})
+            end,
+
             opts = {},
         },
         "folke/lazydev.nvim",
@@ -68,7 +80,7 @@ return { -- Autocompletion
         appearance = {
             -- 'mono' (default) for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
             -- Adjusts spacing to ensure icons are aligned
-            nerd_font_variant = "mono",
+            nerd_font_variant = "normal",
         },
         completion = {
             -- By default, you may press `<c-space>` to show the documentation.
