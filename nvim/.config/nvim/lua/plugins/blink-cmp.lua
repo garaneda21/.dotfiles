@@ -31,12 +31,8 @@ return { -- Autocompletion
             config = function()
                 local luasnip = require('luasnip')
 
-                luasnip.filetype_extend("php", {"html"})
-                luasnip.filetype_extend("php", {"phpdoc"})
-                luasnip.filetype_extend("php", {"blade"})
-
-                luasnip.filetype_extend("blade", {"html"})
-                luasnip.filetype_extend("blade", {"php"})
+                luasnip.filetype_extend("php", {"html", "css", "phpdoc", "blade"})
+                luasnip.filetype_extend("blade", {"html", "css", "phpdoc", "php"})
             end,
 
             opts = {},
@@ -68,7 +64,7 @@ return { -- Autocompletion
             -- <c-k>: Toggle signature help
             --
             -- See :h blink-cmp-config-keymap for defining your own keymap
-            preset = "enter",
+            preset = "default",
 
             ['<S-Tab>'] = { 'select_prev', 'fallback' },
             ['<Tab>'] = { 'select_next', 'fallback' },
@@ -85,7 +81,7 @@ return { -- Autocompletion
         completion = {
             -- By default, you may press `<c-space>` to show the documentation.
             -- Optionally, set `auto_show = true` to show the documentation after a delay.
-            documentation = { auto_show = false, auto_show_delay_ms = 500 },
+            documentation = { auto_show = true, auto_show_delay_ms = 500 },
         },
 
         sources = {

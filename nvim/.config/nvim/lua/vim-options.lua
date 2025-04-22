@@ -6,6 +6,16 @@ vim.cmd("set expandtab")
 vim.cmd("autocmd FileType yaml setlocal ts=2")
 vim.cmd("autocmd FileType yml setlocal ts=2")
 
+-- Mover un grupo de líneas manteniendo shift
+vim.cmd("vnoremap J :m '>+1<CR>gv=gv")
+vim.cmd("vnoremap K :m '<-2<CR>gv=gv")
+
+-- Activar Comprobación de Ortografía
+vim.cmd("map <F6> :setlocal spell! spelllang=en_us,es<CR>")
+
+-- Wrapping
+vim.opt.wrap = false
+
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)

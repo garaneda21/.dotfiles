@@ -1,3 +1,5 @@
+-- NOTE: ESTE PLUGIN ESTÁ ES ESTADO ARCHIVADO
+--
 return {
     "utilyre/barbecue.nvim",
     name = "barbecue",
