@@ -32,7 +32,7 @@ return { -- Autocompletion
                 local luasnip = require('luasnip')
 
                 luasnip.filetype_extend("php", {"html", "css", "phpdoc", "blade"})
-                luasnip.filetype_extend("blade", {"html", "css", "phpdoc", "php"})
+                luasnip.filetype_extend("blade", {"html", --[["css",]] "phpdoc", "php"})
             end,
 
             opts = {},
@@ -66,8 +66,8 @@ return { -- Autocompletion
             -- See :h blink-cmp-config-keymap for defining your own keymap
             preset = "default",
 
-            ['<S-Tab>'] = { 'select_prev', 'fallback' },
-            ['<Tab>'] = { 'select_next', 'fallback' },
+            -- ['<S-Tab>'] = { 'select_prev', 'fallback' },
+            -- ['<Tab>'] = { 'select_next', 'fallback' },
 
             -- For more advanced Luasnip keymaps (e.g. selecting choice nodes, expansion) see:
             --    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
