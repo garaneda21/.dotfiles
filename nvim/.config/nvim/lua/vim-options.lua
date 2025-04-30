@@ -13,6 +13,14 @@ vim.cmd("vnoremap K :m '<-2<CR>gv=gv")
 -- Activar Comprobación de Ortografía
 vim.cmd("map <F6> :setlocal spell! spelllang=en_us,es<CR>")
 
+-- Scroll con cursor al medio
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+
+-- Mantener busquedas en el medio
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
+
 -- Wrapping
 vim.opt.wrap = false
 
