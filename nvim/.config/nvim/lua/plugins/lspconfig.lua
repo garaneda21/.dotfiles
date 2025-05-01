@@ -226,13 +226,16 @@ return {
                 clangd = {},
                 pyright = {},
                 intelephense = {
+                    filetypes = { "php", "phtml", "blade.php" },
                     settings = {
                         init_options = {
-                            globalStoragePath = os.getenv('HOME') .. '/.local/share/intelephense'
+                            globalStoragePath = os.getenv('HOME') .. '/.local/share/intelephense',
+                            format = { braces = 'k&r' },
                         },
                     },
                 },
                 ts_ls = {},
+                texlab = {},
                 lua_ls = {
                     -- cmd = { ... },
                     -- filetypes = { ... },
