@@ -1,0 +1,9 @@
+modmap:
+  - name: modtap
+    remap:
+      # Replace a key with another
+      CAPSLOCK:
+        held: CONTROL_L
+        alone: ESC
+        alone_timeout_millis: 150
+      # Hook `keymap` action on key press/release events.
