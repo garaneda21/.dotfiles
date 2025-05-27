@@ -5,5 +5,5 @@ modmap:
       CAPSLOCK:
         held: CONTROL_L
         alone: ESC
-        alone_timeout_millis: 150
+        alone_timeout_millis: 200
       # Hook `keymap` action on key press/release events.
