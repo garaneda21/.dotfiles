@@ -30,7 +30,7 @@ return {
 				},
 				opts = {
 					-- Para insertar tab en insert mode después de usar un snipper
-					region_check_events = "CursorHold,InsertLeave",
+					region_check_events = "CursorHold,InsertLeave,InsertEnter",
 					delete_check_events = "TextChanged,InsertEnter",
 				},
 			},
