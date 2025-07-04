@@ -246,6 +246,7 @@ return {
                 },
                 ts_ls = {},
                 texlab = {},
+                bashls = {},
                 lua_ls = {
                     -- cmd = { ... },
                     -- filetypes = { ... },
