@@ -3,7 +3,7 @@ return {
 	opts = {
 		window = {
 			backdrop = 1,
-			width = 120, -- width of the Zen window
+			width = 100, -- width of the Zen window
 			height = 0.95, -- height of the Zen window
 			options = {
 				number = false, -- disable number column
