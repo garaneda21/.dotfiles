@@ -11,6 +11,9 @@ return {
 				foldcolumn = "0", -- disable fold column
 			},
 		},
+        plugins = {
+            gitsigns = { enabled = true },
+        },
 		-- callback where you can add custom code when the Zen window opens
 		on_open = function()
 			vim.o.linebreak = true
