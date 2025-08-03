@@ -7,3 +7,10 @@ modmap:
         alone: ESC
         alone_timeout_millis: 200
       # Hook `keymap` action on key press/release events.
+keymap:
+  - name: vim-motions
+    remap:
+      RIGHTALT-H: KEY_LEFT
+      RIGHTALT-J: KEY_DOWN
+      RIGHTALT-K: KEY_UP
+      RIGHTALT-L: KEY_RIGHT
