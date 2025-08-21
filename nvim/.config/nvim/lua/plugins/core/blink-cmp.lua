@@ -23,7 +23,6 @@ return {
 					end,
 				},
 			},
-			opts = {},
 			config = function()
 				local filetype_extend = require("luasnip").filetype_extend
 
@@ -48,7 +47,14 @@ return {
 		appearance = { nerd_font_variant = "normal" },
 		completion = { documentation = { auto_show = true, auto_show_delay_ms = 500 } },
 		sources = {
-			default = { "lsp", "path", "snippets" },
+			default = { "lazydev", "lsp", "path", "snippets" },
+			providers = {
+				lazydev = {
+					name = "LazyDev",
+					module = "lazydev.integrations.blink",
+					score_offset = 100,
+				}
+			}
 		},
 		-- [[ No se que hace, pero los snippets extendidos los duplica.
 		--    Como está comentado, no incluye los snippets custom de luasnip.
