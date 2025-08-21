@@ -14,4 +14,3 @@ ls.add_snippets("lua", {
 		t(' world")'),
 	}),
 })
-

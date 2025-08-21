@@ -17,6 +17,7 @@ return {
 		follow_current_file = true,
 		filesystem = {
 			window = {
+                width = 35,
 				mappings = {
 					["O"] = "system_open",
 				},
