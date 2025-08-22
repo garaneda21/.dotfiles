@@ -14,3 +14,15 @@ keymap:
       RIGHTALT-J: KEY_DOWN
       RIGHTALT-K: KEY_UP
       RIGHTALT-L: KEY_RIGHT
+  - name: media
+    remap:
+      C_R-Z: VOLUMEDOWN
+      C_R-X: VOLUMEUP
+      C_R-C: PLAYPAUSE
+      C_R-SHIFT-C: MUTE
+      C_R-V: NEXTSONG
+      C_R-SHIFT-V: PREVIOUSSONG
+  - name: otros
+    remap:
+      SHIFT-BACKSPACE: DELETE
+      C_R-BACKSLASH: SYSRQ
