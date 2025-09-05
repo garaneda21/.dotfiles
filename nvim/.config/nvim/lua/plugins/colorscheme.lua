@@ -5,7 +5,7 @@ return {
 		config = function ()
 			--@diagnostic disable-next-line: missing-fields
 			require('tokyonight').setup {
-				transparent = true, -- Enable this to disable setting the background color
+				transparent = false, -- Enable this to disable setting the background color
 				styles = {
 					comments = { italic = true },
 				},
@@ -14,7 +14,7 @@ return {
 				end,
 			}
 
-			vim.cmd.colorscheme 'tokyonight-night'
+			vim.cmd.colorscheme 'tokyonight'
 		end
 	},
 }

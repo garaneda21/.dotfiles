@@ -61,7 +61,7 @@ return {
 		--    Puede que tenga que refactorizar el trozo de código que instala LuaSnip,
 		--    	lo demás está bien.
 		-- ]]
-		-- snippets = { preset = "luasnip" },
+		snippets = { preset = "luasnip" },
 		fuzzy = { implementation = "prefer_rust_with_warning" },
 		signature = { enabled = true },
 	},

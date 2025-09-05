@@ -7,9 +7,23 @@ return {
 	opts = {
 		file_types = { "markdown", "vimwiki" },
 		render_modes = { "n", "c", "t", "i" },
-		quote = { repeat_linebreak = true },
 		sign = { enabled = false },
-		code = { width = "block", left_pad = 2, right_pad = 4 },
+		code = { width = "block", right_pad = 4 },
+		quote = { repeat_linebreak = true },
+		win_options = {
+			showbreak = {
+				default = "",
+				rendered = "  ",
+			},
+			breakindent = {
+				default = false,
+				rendered = true,
+			},
+			breakindentopt = {
+				default = "",
+				rendered = "",
+			},
+		},
 
 		vim.treesitter.language.register("markdown", "vimwiki"),
 	},

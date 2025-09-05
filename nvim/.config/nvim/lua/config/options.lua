@@ -15,7 +15,7 @@ vim.o.shiftwidth = 4
 vim.o.swapfile = false
 vim.o.mouse = 'a'
 
-vim.o.colorcolumn = "100"
+-- vim.o.colorcolumn = "100"
 
 vim.o.showmode = false
 vim.o.scrolloff = 10

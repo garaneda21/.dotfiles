@@ -17,8 +17,32 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Setup lazy.nvim
 require("lazy").setup({
-	spec = {
-		{ import = "plugins" },
-		{ import = "plugins.core" },
-	},
+
+    -- Core Plugins
+    require('plugins.core.blink-cmp'),
+    require('plugins.core.conform'),
+    require('plugins.core.gitsigns'),
+    require('plugins.core.lazydev'),
+    require('plugins.core.lint'),
+    require('plugins.core.lspconfig'),
+    require('plugins.core.telescope'),
+    require('plugins.core.treesitter'),
+
+    -- Plugins
+    require('plugins.autopairs'),
+    require('plugins.colorscheme'),
+    require('plugins.guest-indent'),
+    require('plugins.indent-blankline'),
+    require('plugins.neo-tree'),
+    require('plugins.nvim-colorizer'),
+    require('plugins.nvim-ts-autotag'),
+    require('plugins.oil'),
+    require('plugins.render-markdown'),
+    require('plugins.undotree'),
+    require('plugins.vimtex'),
+    require('plugins.vimwiki'),
+    require('plugins.which-key'),
+    require('plugins.zen-mode'),
+
+    require('plugins.mini'),
 })
