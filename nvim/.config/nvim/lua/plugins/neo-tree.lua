@@ -9,7 +9,7 @@ return {
 	lazy = false,
 	keys = {
 		{ "<leader>e", ":Neotree focus<CR>", desc = "NeoTree focus", silent = true },
-		{ "<leader>r", ":Neotree reveal<CR>", desc = "NeoTree [r]eveal", silent = true },
+		{ "<leader>re", ":Neotree reveal<CR>", desc = "NeoTree [r]eveal", silent = true },
 		{ "\\", ":Neotree close<CR>", desc = "NeoTree Close", silent = true },
 	},
 	opts = {
