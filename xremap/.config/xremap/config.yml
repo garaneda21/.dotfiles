@@ -10,19 +10,19 @@ modmap:
 keymap:
   - name: vim-motions
     remap:
-      RIGHTALT-H: KEY_LEFT
-      RIGHTALT-J: KEY_DOWN
-      RIGHTALT-K: KEY_UP
-      RIGHTALT-L: KEY_RIGHT
+      ALT_R-H: LEFT
+      ALT_R-J: DOWN
+      ALT_R-K: UP
+      ALT_R-L: RIGHT
   - name: media
     remap:
-      C_R-Z: VOLUMEDOWN
-      C_R-X: VOLUMEUP
-      C_R-C: PLAYPAUSE
-      C_R-SHIFT-C: MUTE
-      C_R-V: NEXTSONG
-      C_R-SHIFT-V: PREVIOUSSONG
+      CONTROL_R-Z: VOLUMEDOWN
+      CONTROL_R-X: VOLUMEUP
+      CONTROL_R-C: PLAYPAUSE
+      CONTROL_R-SHIFT-C: MUTE
+      CONTROL_R-V: NEXTSONG
+      CONTROL_R-SHIFT-V: PREVIOUSSONG
   - name: otros
     remap:
-      SHIFT-BACKSPACE: DELETE
-      C_R-BACKSLASH: SYSRQ
+      ALT_R-BACKSPACE: DELETE
+      CONTROL_R-BACKSLASH: SYSRQ

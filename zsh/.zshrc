@@ -9,7 +9,6 @@ export EDITOR="nvim"
 
 # Usar vi
 bindkey -e
-export KEYTIMEOUT=1
 
 # Aliases
 alias v="nvim"
