@@ -1,5 +1,11 @@
 -- [[ Custom Keymaps ]]
 
+-- Salir sin guardar
+vim.keymap.set("n", "ZX", "ZQ", { desc = "Quit without saving"} )
+
+-- Borrar palabra con Ctrl + backspace
+vim.keymap.set("i", "<C-H>", "<C-W>")
+
 -- Activar Comprobación de Ortografía
 vim.cmd("map <F6> :setlocal spell! spelllang=en_us,es<CR>")
 

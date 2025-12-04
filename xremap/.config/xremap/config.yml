@@ -14,6 +14,10 @@ keymap:
       ALT_R-J: DOWN
       ALT_R-K: UP
       ALT_R-L: RIGHT
+      ALT_R-E: UP
+      ALT_R-S: LEFT
+      ALT_R-D: DOWN
+      ALT_R-F: RIGHT
   - name: media
     remap:
       CONTROL_R-Z: VOLUMEDOWN

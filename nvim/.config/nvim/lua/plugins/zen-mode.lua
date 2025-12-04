@@ -6,14 +6,17 @@ return {
 			width = 100, -- width of the Zen window
 			height = 0.95, -- height of the Zen window
 			options = {
-				number = false, -- disable number column
-				relativenumber = false, -- disable relative numbers
+				number = true, -- disable number column
+				relativenumber = true, -- disable relative numbers
 				foldcolumn = "0", -- disable fold column
 			},
 		},
-        plugins = {
-            gitsigns = { enabled = true },
-        },
+		plugins = {
+			options = {
+				laststatus = 3,
+			},
+			gitsigns = { enabled = true },
+		},
 		-- callback where you can add custom code when the Zen window opens
 		on_open = function()
 			vim.o.linebreak = true

@@ -12,6 +12,7 @@ bindkey -e
 
 # Aliases
 alias v="nvim"
+alias f="ranger"
 
 # Cargar módulos
 autoload -U compinit && compinit
@@ -34,19 +35,18 @@ setopt PROMPT_SUBST
 setopt NOPROMPTSP # No autolimpiar blanklines
 setopt HISTIGNORESPACE
 
-export PS1="%B%F{green}%n%f@%m%b %F{cyan}%1~%f %# "
 precmd() { 
     vcs_info 
     if [[ -n "$vcs_info_msg_0_" ]]; then
-        RPROMPT="%F{magenta}[ ${vcs_info_msg_0_}]%f %T"
+        PS1="[%B%F{green}%n%f@%m%b %F{cyan}%1~%f%F{magenta} ( ${vcs_info_msg_0_}) %f]%# "
     else
-        RPROMPT="%T"  # Si no estamos en un repositorio Git, solo muestra la hora
+        PS1="[%B%F{green}%n%f@%m%b %F{cyan}%1~%f]%# "
     fi
 }
 
 # Plugins
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2> /dev/null
-source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2> /dev/null
+# source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2> /dev/null
 
 bindkey '^y' autosuggest-accept # CTRL + y : Aceptar sugerencia
 bindkey '^e' edit-command-line
