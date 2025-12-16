@@ -16,10 +16,10 @@ return {
 		notify_on_error = false,
 		formatters_by_ft = {
 			lua = { "stylua" },
-			javascript = { "prettierd", "prettier", stop_after_first = true },
-			typescript = { "prettierd", "prettier", stop_after_first = true },
-			php = { "pint", stop_after_first = true },
-			blade = { "blade-formatter", stop_after_first = true },
+			-- javascript = { "prettierd", "prettier", stop_after_first = true },
+			-- typescript = { "prettierd", "prettier", stop_after_first = true },
+			-- php = { "pint", stop_after_first = true },
+			-- blade = { "blade-formatter", stop_after_first = true },
 		},
 	},
 }

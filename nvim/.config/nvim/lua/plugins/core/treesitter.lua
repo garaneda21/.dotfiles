@@ -17,11 +17,9 @@ return {
             "bash",
             "diff",
             "html",
-            "latex",
-            "bibtex"
         },
         sync_install = false,
-        auto_install = true,
+        auto_install = false,
         indent = { enable = true, disable = { "ruby", "html" } },
         highlight = {
             enable = true,

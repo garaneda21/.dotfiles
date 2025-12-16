@@ -8,7 +8,6 @@ return {
 		"saghen/blink.cmp",
 	},
 	config = function()
-
 		-------------------------
 		--- [[ LSP Servers ]] ---
 		-------------------------
@@ -25,27 +24,31 @@ return {
 
 		local servers = {
 			-- WEB
-			html = {},
-			cssls = {},
-			tailwindcss = {},
-			ts_ls = {},
-			eslint = {},
-			intelephense = {
-				init_options = {
-					globalStoragePath = os.getenv("HOME") .. "/.local/share/intelephense",
-					format = { braces = "k&r" },
-				},
-			},
+
+			-- html = {},
+			-- cssls = {},
+			-- ts_ls = {},
+			-- tailwindcss = {},
+			-- eslint = {},
+			-- gopls = {},
+			-- intelephense = {
+			-- 	   init_options = {
+			-- 	   	   globalStoragePath = os.getenv("HOME") .. "/.local/share/intelephense",
+			-- 	   	   format = { braces = "k&r" },
+			-- 	   },
+			-- },
 
 			-- NATIVO
-			clangd = {},
-			arduino_language_server = {},
-			pyright = {},
+
+			-- clangd = {},
+			-- rust_analyzer = {}
+			-- arduino_language_server = {},
+			-- pyright = {},
+			-- texlab = {},
 			bashls = {},
-			texlab = {},
 			lua_ls = {
 				settings = {
-					Lua = { completion = { callSnippet = "Replace", }, },
+					Lua = { completion = { callSnippet = "Replace" } },
 				},
 			},
 		}
@@ -63,9 +66,9 @@ return {
 		local ensure_installed = vim.tbl_keys(servers or {})
 		vim.list_extend(ensure_installed, {
 			"stylua",
-			"prettierd",
-			"pint",
-			"blade-formatter",
+			-- "prettierd",
+			-- "pint",
+			-- "blade-formatter",
 		})
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
@@ -76,7 +79,6 @@ return {
 		vim.api.nvim_create_autocmd("LspAttach", {
 			group = vim.api.nvim_create_augroup("kickstart-lsp-attach", { clear = true }),
 			callback = function(event)
-
 				-----------------------------------------------------------------------------------
 				--- [[ Mappings + Function that lets us more easily define mappings specific ]] ---
 				-----------------------------------------------------------------------------------
@@ -166,7 +168,7 @@ return {
 			severity_sort = true,
 			float = { border = "rounded", source = "if_many" },
 			underline = { severity = vim.diagnostic.severity.ERROR },
-			signs = {
+			signs = vim.g.have_nerd_font and {
 				text = {
 					[vim.diagnostic.severity.ERROR] = "󰅚 ",
 					[vim.diagnostic.severity.WARN] = "󰀪 ",
