@@ -5,5 +5,8 @@ return {
 	keys = {
 		{ "<leader>-", ":Oil<CR>", desc = "Open parent directory", silent = true },
 	},
-	opts = {},
+	opts = {
+		default_file_explorer = true,
+		columns = { "icon", "permissions", "size", "mtime", },
+	},
 }
