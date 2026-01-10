@@ -1,13 +1,21 @@
--- Para configurar soporte para distintos lenguajes editar:
--- * lspconfig: LSP's y Mason Tools
--- * conform: configura formateadores
--- * lint: configura linters
+--[[ NOTAS
+    Dependencias
+    - tree-sitter-cli
+
+    Para configurar soporte para lenguajes, editar:
+    - lspconfig  : LSP's y Mason-Tools
+    - treesitter : instalar automaticamente parseadores
+    - conform    : configurar formateadores
+    - lint       : configurar linters
+
+    Otros:
+    - Por algún motivo oil.nvim no deja instalar el spellcheck.
+]]
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- Set to true if you have a Nerd Font installed and selected in the terminal
-vim.g.have_nerd_font = false
+vim.g.have_nerd_font = true
 
 require("config.options")
 require("config.keymaps")

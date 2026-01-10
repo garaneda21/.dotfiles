@@ -16,6 +16,7 @@ return {
 		close_if_last_window = true,
 		follow_current_file = true,
 		filesystem = {
+			hijack_netrw_behavior = "disabled",
 			window = {
                 width = 35,
 				mappings = {

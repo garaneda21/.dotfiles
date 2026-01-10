@@ -45,12 +45,12 @@ return {
 			-- arduino_language_server = {},
 			-- pyright = {},
 			-- texlab = {},
-			bashls = {},
-			lua_ls = {
-				settings = {
-					Lua = { completion = { callSnippet = "Replace" } },
-				},
-			},
+			-- bashls = {},
+			-- lua_ls = {
+			--     settings = {
+			-- 	   	   Lua = { completion = { callSnippet = "Replace" } },
+			-- 	   },
+			-- },
 		}
 
 		-- Como ahora mason-lspconfig activa automáticamente los LSP's instalados,
@@ -65,7 +65,7 @@ return {
 
 		local ensure_installed = vim.tbl_keys(servers or {})
 		vim.list_extend(ensure_installed, {
-			"stylua",
+			-- "stylua",
 			-- "prettierd",
 			-- "pint",
 			-- "blade-formatter",
