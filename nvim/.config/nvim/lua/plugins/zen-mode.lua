@@ -20,13 +20,13 @@ return {
 		-- callback where you can add custom code when the Zen window opens
 		on_open = function()
 			vim.o.linebreak = true
-			vim.o.spell = true
-			vim.o.spelllang = "en_us,es"
+			-- vim.o.spell = true
+			-- vim.o.spelllang = "en_us,es"
 		end,
 		-- callback where you can add custom code when the Zen window closes
 		on_close = function()
 			vim.o.linebreak = false
-			vim.o.spell = false
+			-- vim.o.spell = false
 		end,
 	},
 	keys = {

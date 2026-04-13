@@ -5,7 +5,7 @@ return {
 		config = function ()
 			--@diagnostic disable-next-line: missing-fields
 			require('tokyonight').setup {
-				transparent = false, -- Enable this to disable setting the background color
+				transparent = true, -- Enable this to disable setting the background color
 				styles = {
 					comments = { italic = true },
 				},

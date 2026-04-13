@@ -17,7 +17,7 @@ vim.g.maplocalleader = " "
 
 vim.g.have_nerd_font = true
 
-require("config.options")
-require("config.keymaps")
-require("config.plugins")
-require("config.snippets")
+require("options")
+require("keymaps")
+require("plugins")
+require("snippets")

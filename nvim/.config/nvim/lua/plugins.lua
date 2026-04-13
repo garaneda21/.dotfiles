@@ -28,25 +28,26 @@ require("lazy").setup({
 	require("plugins.core.telescope"),
 	require("plugins.core.lazydev"),
 
-    -- Plugins
-    require("plugins.colorscheme"),
-    require("plugins.neo-tree"),
-    require("plugins.oil"),
-    require("plugins.zen-mode"),
-    require("plugins.mini"),
+	-- Plugins
+	require("plugins.colorscheme"),
+	require("plugins.neo-tree"),
+	require("plugins.oil"),
+	require("plugins.zen-mode"),
+	require("plugins.mini"),
 
-    -- QoL
-    require("plugins.autopairs"),
-    require("plugins.guest-indent"),
-    require("plugins.indent-blankline"),
-    require("plugins.nvim-colorizer"),
-    require("plugins.nvim-ts-autotag"),
+	-- QoL
+	require("plugins.autopairs"),
+	require("plugins.guest-indent"),
+	require("plugins.indent-blankline"),
+	require("plugins.nvim-colorizer"),
+	require("plugins.nvim-ts-autotag"),
 	require("plugins.which-key"),
-	require("plugins.render-markdown"),
 	require("plugins.undotree"),
+	require("plugins.render-markdown"),
 
-    -- Otra Funcionalidad
-	require("plugins.vimtex"),
+	-- Otra Funcionalidad
+	--require("plugins.vimtex"),
+	--require("plugins.obsidian"),
 	require("plugins.vimwiki"),
 }, {
 	ui = {

@@ -30,7 +30,7 @@ return {
 			-- ts_ls = {},
 			-- tailwindcss = {},
 			-- eslint = {},
-			-- gopls = {},
+			gopls = {},
 			-- intelephense = {
 			-- 	   init_options = {
 			-- 	   	   globalStoragePath = os.getenv("HOME") .. "/.local/share/intelephense",
@@ -45,12 +45,12 @@ return {
 			-- arduino_language_server = {},
 			-- pyright = {},
 			-- texlab = {},
-			-- bashls = {},
-			-- lua_ls = {
-			--     settings = {
-			-- 	   	   Lua = { completion = { callSnippet = "Replace" } },
-			-- 	   },
-			-- },
+			bashls = {},
+			lua_ls = {
+			    settings = {
+				   	   Lua = { completion = { callSnippet = "Replace" } },
+				   },
+			},
 		}
 
 		-- Como ahora mason-lspconfig activa automáticamente los LSP's instalados,
