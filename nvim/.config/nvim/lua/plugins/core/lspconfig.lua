@@ -1,7 +1,13 @@
 return {
 	"neovim/nvim-lspconfig",
 	dependencies = {
-		{ "mason-org/mason.nvim", opts = {} },
+		{
+			"mason-org/mason.nvim",
+			---@module 'mason.settings'
+			---@type MasonSettings
+			---@diagnostic disable-next-line: missing-fields
+			opts = {},
+		},
 		{ "mason-org/mason-lspconfig.nvim", opts = {} },
 		{ "WhoIsSethDaniel/mason-tool-installer.nvim", opts = {} },
 		{ "j-hui/fidget.nvim", opts = {} },
@@ -30,7 +36,7 @@ return {
 			-- ts_ls = {},
 			-- tailwindcss = {},
 			-- eslint = {},
-			gopls = {},
+			-- gopls = {},
 			-- intelephense = {
 			-- 	   init_options = {
 			-- 	   	   globalStoragePath = os.getenv("HOME") .. "/.local/share/intelephense",
@@ -45,12 +51,12 @@ return {
 			-- arduino_language_server = {},
 			-- pyright = {},
 			-- texlab = {},
-			bashls = {},
-			lua_ls = {
-			    settings = {
-				   	   Lua = { completion = { callSnippet = "Replace" } },
-				   },
-			},
+			-- bashls = {},
+			-- lua_ls = {
+			-- 	settings = {
+			-- 		Lua = { completion = { callSnippet = "Replace" } },
+			-- 	},
+			-- },
 		}
 
 		-- Como ahora mason-lspconfig activa automáticamente los LSP's instalados,

@@ -8,6 +8,8 @@ vim.keymap.set("i", "<C-H>", "<C-W>")
 
 -- Activar Comprobación de Ortografía
 vim.cmd("map <F6> :setlocal spell! spelllang=en_us,es<CR>")
+-- Corregir Ortografía
+vim.keymap.set("n", "gs", "z=", {desc = "Correct Misspelling"})
 
 -- Mover un grupo de líneas manteniendo shift
 vim.cmd("vnoremap J :m '>+1<CR>gv=gv")

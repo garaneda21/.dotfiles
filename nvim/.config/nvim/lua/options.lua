@@ -13,7 +13,7 @@ vim.o.shiftwidth = 4
 vim.o.softtabstop = 4
 vim.o.autoindent = true
 vim.o.expandtab = true
-vim.o.smartindent = true -- conflicto con plugins
+--vim.o.smartindent = true -- conflicto con plugins
 vim.o.smarttab = true
 vim.o.breakindent = true
 
